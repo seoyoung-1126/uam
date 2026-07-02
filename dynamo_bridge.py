@@ -2,7 +2,7 @@
 """
 [Dynamo Python Script Node 용 템플릿 코드]
 이 스크립트는 Revit 내 Dynamo의 Python Script 노드에 복사해 넣는 코드입니다.
-로컬 AI 대시보드(http://localhost:8080)와 Revit 모델링 매개변수를 실시간 브릿지 연동합니다.
+로컬 AI 대시보드(http://localhost:3000)와 Revit 모델링 매개변수를 실시간 브릿지 연동합니다.
 """
 
 import sys
@@ -36,7 +36,7 @@ mass_element = UnwrapElement(IN[0]) if IN[0] else None
 candidate_points = IN[1] if IN[1] else []
 
 # 로컬 Flask 대시보드 API 주소
-API_BASE = "http://localhost:8080"
+API_BASE = "http://localhost:3000"
 
 def send_to_dashboard(endpoint, data):
     """로컬 대시보드 API로 POST 요청 전송"""
